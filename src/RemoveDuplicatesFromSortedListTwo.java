@@ -4,34 +4,30 @@ Given the head of a sorted linked list, delete all nodes that have duplicate num
 leaving only distinct numbers from the original list. Return the linked list sorted as well.
  */
 public class RemoveDuplicatesFromSortedListTwo {
-	// Defined from LeetCode
-	private static class ListNode {
-		int val;
-		ListNode next;
-		ListNode() {}
-		ListNode(int val) { this.val = val; }
-		ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
-
-	public static void main(String[] args) {
-
-	}
+	public static void main(String[] args) {}
 
 	private static ListNode deleteDuplicates(ListNode head) {
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;
-		ListNode node = new ListNode(0);
-		if (node.next == null) {
-			return node;
-		}
+		ListNode prev = dummy;
+		while (head != null) {
+			boolean isDuplicate = false;
 
-		while (head.next != null && head.next.next != null) {
-			if (node.next.val != head.next.next.val) {
+			while (head.next != null && head.val == head.next.val) {
 				head = head.next;
+				isDuplicate = true;
 			}
 
+			if (isDuplicate) {
+				prev.next = head.next;
+			} else {
+				prev = prev.next;
+			}
+
+			head = head.next;
 		}
 
-		return null;
+		return dummy.next;
+
 	}
 }

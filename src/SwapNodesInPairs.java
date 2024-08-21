@@ -5,14 +5,6 @@ You must solve the problem without modifying the values in the list's nodes
 (i.e., only nodes themselves may be changed.)
  */
 public class SwapNodesInPairs {
-	private static class ListNode {
-		int val;
-		ListNode next;
-		ListNode() {}
-		ListNode(int val) { this.val = val; }
-		ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
-
 	public static void main(String[] args) {
 		ListNode node1 = new ListNode(1);
 		ListNode node2 = new ListNode(2);
