@@ -4,21 +4,6 @@ Given an integer array nums where the elements are sorted in ascending order,
 convert it to a height-balanced binary search tree
  */
 public class ConvertSortedArrayToBinarySearchTree {
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-		TreeNode() {}
-		TreeNode(int val) {
-			this.val = val;
-		}
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
-
 	public static void main(String[] args) { }
 
 	private static TreeNode sortedArrayToBST(int[] nums) {

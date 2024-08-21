@@ -5,14 +5,6 @@ Merge the two lists into one sorted list. The list should be made by splicing to
 Return the head of the merged linked list.
  */
 public class MergeTwoSortedLists {
-	private static class ListNode {
-		int val;
-		ListNode next;
-		ListNode() {}
-		ListNode(int val) { this.val = val; }
-		ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
-
 	public static void main(String[] args) {
 		ListNode node1_1 = new ListNode(1);
 		ListNode node1_2 = new ListNode(2);

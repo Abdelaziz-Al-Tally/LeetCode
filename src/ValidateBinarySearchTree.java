@@ -8,24 +8,7 @@ A valid BST is defined as follows:
 - Both the left and right subtrees must also be binary search trees.
  */
 public class ValidateBinarySearchTree {
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-		TreeNode() {}
-		TreeNode(int val) {
-			this.val = val;
-		}
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
-
-	public static void main(String[] args) {
-
-	}
+	public static void main(String[] args) {}
 
 	private static boolean isValidBST(TreeNode root) {
 		return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);

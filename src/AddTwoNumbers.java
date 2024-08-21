@@ -6,15 +6,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 public class AddTwoNumbers {
 	public static void main(String[] args) {}
 
-	// Defined from LeetCode
-	private class ListNode {
-		int val;
-		ListNode next;
-		ListNode() {}
-		ListNode(int val) { this.val = val; }
-		ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
-
 	private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode dummy = new ListNode(0);
 		ListNode current = dummy;
